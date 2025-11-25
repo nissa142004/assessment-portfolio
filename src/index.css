@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- minimal global tweaks ---- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #e5e7eb; /* slate-200 */
+}
+
+/* Let Tailwind handle link styling */
+a {
+  text-decoration: none;
+}
+
+/* Default font stack */
+:root {
+  font-family: system-ui, ui-sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+}
+
+/* Horizontal chapter nav – thin scrollbar */
+.nav-scroll {
+  scrollbar-width: thin;                 /* Firefox */
+  scrollbar-color: #a5b4fc #e5e7eb;      /* thumb / track (indigo-300 / slate-200) */
+}
+.nav-scroll::-webkit-scrollbar {
+  height: 6px;                           /* horizontal bar height */
+}
+.nav-scroll::-webkit-scrollbar-track {
+  background: #e5e7eb;
+  border-radius: 9999px;
+}
+.nav-scroll::-webkit-scrollbar-thumb {
+  background: #a5b4fc;                   /* indigo-300 */
+  border-radius: 9999px;
+}
+.nav-scroll::-webkit-scrollbar-thumb:hover {
+  background: #818cf8;                   /* indigo-400 */
+}
+
+/* Optional: vertical thin scrollbar if you use .sidebar-scroll */
+.sidebar-scroll {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #22c55e #e5e7eb;
+}
+.sidebar-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: #e5e7eb;
+  border-radius: 9999px;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: #22c55e;
+  border-radius: 9999px;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: #16a34a;
+}
