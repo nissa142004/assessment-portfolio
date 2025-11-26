@@ -139,8 +139,8 @@ export default function Chapter3Section() {
         </SectionCard>
         <SectionCard title="6/7 Cs for answers" tone="slate">
           <ul className="list-disc pl-5 space-y-1">
-            <li><span className="font-semibold">Concise</span> &amp; <span className="font-semibold">Concise</span>: no additional narratives.</li>
-            <li><span className="font-semibold">Right</span>: include valid facts and the required information.</li>
+            <li><span className="font-semibold">clear</span> &amp; <span className="font-semibold">Concise</span>: no additional narratives.</li>
+            <li><span className="font-semibold">Correct</span>: include valid facts and the required information.</li>
             <li><span className="font-semibold">Concrete</span>: include examples, results and numbers where feasible.</li>
             <li><span className="font-semibold">Courteous/Confident</span>: be polite and look forward to it.</li>
           </ul>
