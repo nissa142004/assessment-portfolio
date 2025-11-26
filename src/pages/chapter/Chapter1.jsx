@@ -304,7 +304,7 @@ export default function Chapter1Section() {
             yet to be discovered.
           </p>
           <ul className="list-disc pl-5 space-y-1 text-slate-100/90">
-            <li>Open: information about other people and myself.</li>
+            <li>Open: What we and others know about myself.</li>
             <li>Blind: things people see in me but I do not.</li>
             <li>Hidden: things I am aware of, but I do not display them.</li>
             <li>Unknown: the things that that me or other people do not know.</li>
