@@ -50,7 +50,7 @@ export default function Chapter5Section() {
           Research Writing
         </h1>
         <p className="mt-2 text-slate-300">
-          Learn the academic research process, structure, key components, and systematic methods to write a strong research paper.
+          Understand the academic research process, structure, and major aspects, systematic ways of writing a solid research paper.
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
           {chips.map((c) => (
@@ -62,16 +62,16 @@ export default function Chapter5Section() {
       {/* Overview */}
       <SectionCard tone="cyan" title="Overview">
         <p>
-          This session was conducted by <strong>Ms. Ishadi Nilawerese</strong>, focusing on the fundamentals of research writing.
-          The lecture covered research structure, academic writing principles, and techniques for presenting findings clearly and professionally.
+          This session was taken by <strong>Ms. Ishadi Nilawerese</strong>, which was centered on the basics of research writing.
+          The lecture included the structure of research, principles of writing an academic paper, and the methods of presenting the findings in a professional and understandable manner.
         </p>
       </SectionCard>
 
-      {/* Mastering Research Writing */}
+      {/* Mastering Research */}
       <SectionCard tone="emerald" title="Mastering Research Writing">
         <p>
-          Research writing is essential for academic and professional success. It involves analyzing information, conducting thorough research,
-          and presenting findings in a structured, credible, and academically rigorous manner.
+          Scholarly as well as professional success depends on research writing. It entails the processing of information, comprehensive research,
+          and communicating the results in an orderly, plausible and scholarly way.
         </p>
       </SectionCard>
 
@@ -87,18 +87,18 @@ export default function Chapter5Section() {
         </ul>
       </SectionCard>
 
-      {/* Real-Life Examples */}
-      <SectionCard tone="amber" title="Real-Life Examples of Research">
+      {/* Real Life Research */}
+      <SectionCard tone="amber" title="The Research in the Real Results.">
         <ul className="list-disc pl-5 space-y-1">
-          <li>Comparing smartphones before purchasing</li>
-          <li>Testing algorithms in software development</li>
-          <li>Observing customer behavior in shops</li>
-          <li>Measuring student preferences for food or services</li>
+          <li>Comparison of the smartphones prior to purchase.</li>
+          <li>Software development testing algorithms.</li>
+          <li>Monitoring the behavior of the customers in stores.</li>
+          <li>Determining student preferences of food or services.</li>
         </ul>
       </SectionCard>
 
-      {/* Key Components */}
-      <SectionCard tone="slate" title="Key Components of a Research Paper">
+      {/* Components */}
+      <SectionCard tone="slate" title="Different Major Elements of a research paper.">
         <ul className="list-disc pl-5 space-y-1">
           <li>Title</li>
           <li>Author information</li>
@@ -116,7 +116,7 @@ export default function Chapter5Section() {
       </SectionCard>
 
       {/* 8 Steps */}
-      <SectionCard tone="cyan" title="8 Steps to Write a Research Paper">
+      <SectionCard tone="cyan" title="How to write a research paper in 8 steps.">
         <ul className="list-disc pl-5 space-y-1">
           <li>Carry out Research</li>
           <li>Choose a Good Topic</li>
@@ -130,13 +130,13 @@ export default function Chapter5Section() {
       </SectionCard>
 
       {/* Guidelines */}
-      <SectionCard tone="violet" title="Guidelines for Writing a Successful Research Paper">
+      <SectionCard tone="violet" title="How to write a successful research paper.">
         <ul className="list-disc pl-5 space-y-1">
-          <li>Use a unique, clear writing style.</li>
+          <li>Write in a distinctive and distinct manner.</li>
           <li>Avoid unnecessary jargon.</li>
-          <li>Explain scientific terms clearly.</li>
-          <li>Use evidence-based arguments.</li>
-          <li>Follow all publication rules.</li>
+          <li>Describe scientific terms in an understandable way.</li>
+          <li>Apply factual arguments.</li>
+          <li>Adhere to all publication guidelines.</li>
           <li>Proofread from top to bottom.</li>
         </ul>
       </SectionCard>
@@ -144,8 +144,8 @@ export default function Chapter5Section() {
       {/* Reflection */}
       <SectionCard tone="emerald" title="Reflection">
         <p>
-          I completed a research project on <strong>“The Impact of Emotional Intelligence on Team Performance”</strong>.
-          This experience improved my ability to conduct proper academic research and present my findings in a structured, professional way.
+          I have done a research project on the topic of the influence of EI on team performance.
+          This experience enhanced my skills in the area of proper academic research and reporting my findings in a professional manner.
         </p>
       </SectionCard>
     </div>

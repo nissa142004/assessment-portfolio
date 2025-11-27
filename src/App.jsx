@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import Home from "./pages/Home.jsx";
 import Chapter1Section from "./pages/chapter/Chapter1.jsx";
 import Chapter2Section from "./pages/chapter/Chapter2.jsx";
 import Chapter3Section from "./pages/chapter/Chapter3.jsx";
@@ -11,15 +12,45 @@ import Chapter9Section from "./pages/chapter/Chapter9.jsx";
 // import Chapter10Section from "./pages/chapter/Chapter10.jsx";
 // import Chapter11Section from "./pages/chapter/Chapter11.jsx";
 
+// 🔹 Main app: switches between Home, Portfolio, and CV
+function App() {
+  const [view, setView] = useState("home"); // "home" | "portfolio" | "cv"
+
+  if (view === "home") {
+    return (
+      <Home
+        onEnterPortfolio={() => setView("portfolio")}
+        onViewCV={() => setView("cv")}
+      />
+    );
+  }
+
+  if (view === "cv") {
+    return (
+      <CVPage
+        onBackHome={() => setView("home")}
+        onGoPortfolio={() => setView("portfolio")}
+      />
+    );
+  }
+
+  // portfolio view
+  return (
+    <AssessmentPortfolio
+      onBackHome={() => setView("home")}
+    />
+  );
+}
+
 // 🌑 Dark transparent theme + Top Navigation Layout
-export default function AssessmentPortfolio() {
+function AssessmentPortfolio({ onBackHome, onGoCV }) {
   const chapters = useMemo(
     () => [
       { id: "ch1", title: "Introduction to Professional Skills", body: sampleIntro },
       { id: "ch2", title: "CV & Cover Letter", body: "/." },
       { id: "ch3", title: "Job Hunting & Interview Skills", body: "/" },
       { id: "ch4", title: "Portfolio Management", body: "/" },
-      { id: "ch5", title: "Meetings & Speaking Skills", body: "/" },
+      { id: "ch5", title: "Research Paper Writing", body: "/" },
       { id: "ch6", title: "Project Proposal Writing & Evaluation", body: "/" },
       { id: "ch7", title: "Food Festival – Ralahami Kadée", body: "/" },
       { id: "ch8", title: "Emotional Intelligence (EI)", body: "/" },
@@ -53,7 +84,10 @@ export default function AssessmentPortfolio() {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-100">
+    <div
+      id="top"
+      className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-100"
+    >
       {/* 🌟 TOP NAVIGATION BAR + COLLAPSIBLE CHAPTER BAR */}
       <header className="sticky top-0 z-40 bg-slate-950/30 backdrop-blur-2xl">
         {/* full-width container */}
@@ -75,6 +109,26 @@ export default function AssessmentPortfolio() {
             </div>
 
             <div className="flex items-center gap-3">
+              {/* 🔙 Back to Home button */}
+              {onBackHome && (
+                <button
+                  onClick={onBackHome}
+                  className="hidden sm:inline-flex items-center gap-1 rounded-full border border-slate-700 bg-slate-900/70 px-3 py-1 text-[11px] font-medium text-slate-100 hover:border-emerald-400 hover:text-emerald-200 hover:bg-slate-900/90 transition-all"
+                >
+                  Home
+                </button>
+              )}
+
+              {/* 📄 View CV button */}
+              {onGoCV && (
+                <button
+                  onClick={onGoCV}
+                  className="hidden sm:inline-flex items-center gap-1 rounded-full border border-emerald-500 bg-emerald-400/90 px-3 py-1 text-[11px] font-medium text-slate-950 hover:bg-emerald-300 hover:border-emerald-300 transition-all"
+                >
+                  View CV
+                </button>
+              )}
+
               <div className="hidden sm:flex flex-col items-end text-[10px] md:text-xs text-slate-300">
                 <span className="font-semibold text-emerald-300">
                   {chapters.findIndex((c) => c.id === active) + 1} / {chapters.length}
@@ -281,3 +335,5 @@ function ReadingProgress() {
 }
 
 const sampleIntro = `Professional skills include teamwork, leadership, problem solving, and communication. These skills help us grow in any workplace because they are transferable. Our first lecture covered how values, beliefs, and attitudes shape our character and behaviour.`;
+
+export default App;
