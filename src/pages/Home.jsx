@@ -4,11 +4,14 @@ import React, { useEffect, useState } from "react";
 const chips = [
   "Professional Skills",
   "CV & Cover Letter",
-  "Job Hunting",
-  "Interview Skills",
-  "Portfolio",
-  "Meetings",
-  "Projects",
+  "Job Hunting & Interview Skills",
+  "Portfolio Management",
+  "Research Writing",
+  "Project Proposal Writing & Evaluation",
+  "Food Festival – Ralahami Kadé",
+  "Emotional Intelligence (EI)",
+  "Dining Etiquette & Table Manners",
+
 ];
 
 // 🔹 Data for interactive Chapter Preview box (1–9)
@@ -260,8 +263,8 @@ export default function Home({ onEnterPortfolio }) {
 
       {/* Small footer */}
       <footer className="w-full px-4 md:px-10 py-3 text-[10px] md:text-xs text-slate-500 flex justify-between items-center">
-        <span>© {new Date().getFullYear()} Nissa – Student Portfolio</span>
-        <span>Built with React &amp; Tailwind CSS</span>
+        <span>© {new Date().getFullYear()} Nisindu Sathsara – Assessment Portfolio</span>
+        <span>StudentID: SA24610016</span>
       </footer>
     </div>
   );
