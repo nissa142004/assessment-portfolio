@@ -111,7 +111,7 @@ export default function Home({ onEnterPortfolio }) {
               Professional Skills – Assessment Portfolio
             </h1>
             <p className="text-[10px] md:text-xs text-slate-400">
-              Designed &amp; written by Nissa (student portfolio)
+              Designed &amp; written by NISINDU SATHSARA (Assessment portfolio)
             </p>
           </div>
         </div>
