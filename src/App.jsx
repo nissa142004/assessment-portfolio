@@ -25,14 +25,14 @@ function App() {
     );
   }
 
-  if (view === "cv") {
-    return (
-      <CVPage
-        onBackHome={() => setView("home")}
-        onGoPortfolio={() => setView("portfolio")}
-      />
-    );
-  }
+  // if (view === "cv") {
+  //   return (
+  //     <CVPage
+  //       onBackHome={() => setView("home")}
+  //       onGoPortfolio={() => setView("portfolio")}
+  //     />
+  //   );
+  // }
 
   // portfolio view
   return (
